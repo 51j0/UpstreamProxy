@@ -51,4 +51,4 @@ def response(flow: http.HTTPFlow) -> None:
         if(len(content)!=0):
             output = AESCipher("KEY","IV").encrypt(content).decode('utf-8')
             print ("#output: ",output)
-            flow.request.content = output.encode('utf-8')
+            flow.response.content = output.encode('utf-8')
