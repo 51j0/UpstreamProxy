@@ -34,7 +34,7 @@ def request(flow: http.HTTPFlow) -> None:
     print("[#]", "-----------Request--------------\n")
     print('REQ', content)
 
-    if ("upaay.lvbank.in" in url):
+    if ("evil.com" in url):
         if(len(content)!=0):
             output = AESCipher("KEY","IV").decrypt(content).decode('utf-8')
             print ("#output: ",output)
@@ -47,7 +47,7 @@ def response(flow: http.HTTPFlow) -> None:
     url = flow.request.pretty_url
     print('#RES', content)
 
-    if ("upaay.lvbank.in" in url):
+    if ("evil.com" in url):
         if(len(content)!=0):
             output = AESCipher("KEY","IV").encrypt(content).decode('utf-8')
             print ("#output: ",output)
