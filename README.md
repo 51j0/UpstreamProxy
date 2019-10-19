@@ -6,6 +6,7 @@ UpstreamProxy is a command line proxy server which provides tcpdump-like functio
 
 Currently Supporting
 
+ * Capture HTTP and HTTPS traffic
  * Modify Request/Response
  * AES-CBC-PKCS5Padding/PKCS7Padding Encryption and Decryption
 
